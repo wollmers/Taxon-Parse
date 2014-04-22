@@ -17,6 +17,9 @@ nytprof.out
 nytprof/
 pm_to_blib
 
+*.java
+*.php
+
 xt/
 
 *.tar.gz
