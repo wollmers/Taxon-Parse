@@ -31,6 +31,12 @@ sub patterns {
   return $self->{patterns};
 }
 
+sub order {
+  my $self = shift;
+  my $pattern = shift;
+  return $self->{order}->{$pattern} if exists $self->{order}->{$pattern};
+}
+
 sub match {
   my $self = shift;
   my $pattern = shift;
@@ -76,6 +82,24 @@ sub pick {
   my $regex = $self->pattern($pattern);
   my @result = $string =~ m/($regex)/g;
   return @result;
+}
+
+sub ast {
+  my $self = shift;
+  my $pattern = shift;
+  my $string = shift;
+  
+  my $regex = $self->pattern($pattern);
+  my $order = $self->order($pattern);
+  my $result = [];
+  {
+     if ($string =~ m/^$regex$/) {
+       for my $key (@$order) {
+         push @$result,[ $key, $+{$key} ] if ($+{$key});
+       }
+     };
+  }
+  return $result;
 }
 
 sub init {

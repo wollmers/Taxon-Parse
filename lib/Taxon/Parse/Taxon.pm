@@ -14,6 +14,9 @@ sub init {
   # l_ - patterns for latin names
   $p->{apostrophe} = qr/[\'´`]/xms;
   $p->{compound_connector} = qr/[-]/xms;
+  $p->{NAME_LETTERS} = qr/[A-ZÏËÖÜÄÉÈČÁÀÆŒ]/xms;
+  $p->{name_letters} = qr/[a-zïëöüäåéèčáàæœ]/xms;
+ 
   
   $p->{word}     = qr/
     \b
@@ -27,14 +30,15 @@ sub init {
   /xms;
   $p->{group}    = qr/
     \b
-    [A-Z][a-z]+
+    $p->{NAME_LETTERS}
+    $p->{name_letters}+
     \b
   /xms;
   $p->{epithet}  = qr/
-    [a-z]+
+    $p->{name_letters}+
     (?:
       [-]?
-      [a-z]+
+      $p->{name_letters}+
     )?
   /xms;
   $p->{abbrev}   = qr/
@@ -134,12 +138,28 @@ sub init {
         $p->{sensu}
       )?
   /xms;
+  $p->{namecaptured}     = qr/
+    (?<genus> $p->{genus} )
+      (?:
+        (?:
+          \s+
+          (?<species_marker> $p->{species_marker} )
+        )?
+        \s+
+        (?<epithet> $p->{epithet} )
+      )*
+      (?:
+        \s+
+        (?<sensu> $p->{sensu} )
+      )?
+  /xms;
 
   
   my $patterns = $self->{patterns};
-  my @patterns = qw< name group genus species list epithet >;
+  my @patterns = qw< name group genus species list epithet namecaptured>;
   map { $patterns->{$_} = $p->{$_} } @patterns;
-  $self->{scores} = $self->scores();  
+  $self->{scores} = $self->scores();
+  $self->{order}->{namecaptured} = [qw< genus species_marker epithet sensu >];  
 }
 
 sub scores {

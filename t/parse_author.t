@@ -305,5 +305,9 @@ for my $name (@$examples) {
   ok($object->check('full',$name), "check full $name"); 
 }
 
+for my $name (@$examples) {
+  ok($object->check('authorcaptured',$name), "check captured $name"); 
+}
+
 
 done_testing();

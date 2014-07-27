@@ -33,7 +33,7 @@ ok($object->match('word','Mann'), 'match word Mann');
 
 ok($object->check('epithet','mann'), 'check word mann');
 ok($object->check('group','Mann'), 'check word Mann');
-ok($object->check('genus','Mann-Frau'), 'check compound Mann-Frau');
+#ok($object->check('genus','Mann-Frau'), 'check compound Mann-Frau');
 
 ok($object->check('species','Viola mann-frau'), 'check species Viola mann-frau');
 
@@ -68,27 +68,32 @@ my $names = [
         
 'Bactrocera (Hemizeugodacus) ektoalangiae',
         
-'Steinernema cf. glaseri',
-'Arthopyrenia hyalospora X Hydnellum scrobiculatum',
         
 'Coptotermes (Polycrinitermes) chaoxianensis',
         
+'Helicobacter pylori',
+'Pseudomonas fluorescens',
+'Abelia × grandiflora',
+'Abies X shastensis',
+'Abies ser. Amabiles',
+
+];
+
+my $names_todo = [
 'Anodonthyla sp. ZSM 673/2003',
         
 '"Spirochaeta interrogans"',
-'Helicobacter pylori',
 'not "Brucella ovis"',
 '"Bacterium aquatilis"',
-'Pseudomonas fluorescens',
 'alpha proteobacterium endosymbiont of Paracatenula sp.',
 'Plocamium sp. 2telfairiae BOLD:AAO5906',
 'Influenza A virus (A/common teal/California/11285/2008(mixed))',
 'Lactobacillus delbrueckii subsp. bulgaricus CNCM I-1519',
-'Abelia × grandiflora',
 'Abeona ? serrata',
-'Abies X shastensis',
-'Abies ser. Amabiles',
 'Aboilus? amplus',
+
+'Steinernema cf. glaseri',
+'Arthopyrenia hyalospora X Hydnellum scrobiculatum',
 
 ];
 
@@ -152,5 +157,11 @@ for my $name (@$names) {
   ok($object->check('name',$name), "check full $name"); 
 }
 
+for my $name (@$names) {
+  ok($object->check('namecaptured',$name), "check captured $name"); 
+}
+
+my $ast = $object->ast('namecaptured','Dennyus (Collodennyus) distinctus timjonesi');
+print STDERR Dumper($ast),"\n";
 
 done_testing();

@@ -207,11 +207,39 @@ sub init {
       \s* \)?
     )?
   /xms;
+
+  $p->{authorcaptured}   = qr/
+    (?<basionymauthor>
+      $p->{bracketed}\s*
+    )?
+    (?<reference_relation>
+      $p->{reference_relation}\s+
+    )?
+    (?<author>
+      \s*
+      $p->{plain}
+    )?
+    (?<date>
+      \s*
+      $p->{date}
+    )?
+    (?<non>
+      \s*\,?\s*
+      \(? \s*
+      (?:
+        p \.? \s* p \.?
+        | non .*
+        | nom\. \s* illeg\.
+      )
+      \s* \)?
+    )?
+  /xms;
+
   
   my $patterns = $self->{patterns};
-  my @patterns = qw< full abbreviated_name>;
+  my @patterns = qw< full abbreviated_name authorcaptured>;
   map { $patterns->{$_} = $p->{$_} } @patterns;
-
+  $self->{order}->{authorcaptured} = [qw< basionymauthor reference_relation author date non>];  
 }
 
 
