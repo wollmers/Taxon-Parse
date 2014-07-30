@@ -9,7 +9,7 @@ our $VERSION = 0.001;
 
 # TODO
 
-=comment
+=head1 TODO
 
 use Taxon::Rank::Suffix;
 
