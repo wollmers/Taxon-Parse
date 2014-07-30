@@ -3,6 +3,8 @@ package Taxon::Parse;
 use strict;
 use warnings;
 
+our $VERSION = 0.001;
+
 sub new {
   my $class = shift;
   my $self = {
@@ -111,6 +113,50 @@ sub init {
   $p->{compound_connector} = qr/[-]/xms;
 
 }
+
+
+__END__
+
+=head1 NAME
+
+Taxon::Parse - Parse bio Taxon names
+
+=head1 SYNOPSIS
+
+ use Taxon::Parse;
+ Taxon::Parse->new();
+ 
+=head1 DESCRIPTION
+
+=head2 Cosine similarity
+
+A intersection B / (sqrt(A) * sqrt(B))
+
+
+=head1 METHODS
+
+
+=head2 new
+
+ my $object = Taxon::Parse->new();
+ 
+=head1 SOURCE REPOSITORY
+
+L<http://github.com/wollmers/Taxon-Parse>
+
+=head1 AUTHOR
+
+Helmut Wollmersdorfer, E<lt>helmut.wollmersdorfer@gmail.comE<gt>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2013-2014 by Helmut Wollmersdorfer
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+=cut
+
 
 
 1;

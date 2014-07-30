@@ -1,18 +1,27 @@
-package Nomen::Parse::Suffix;
+package Taxon::Parse::Suffix;
 
 use strict;
 use warnings;
 
-use parent qw( Nomen::Parse );
-use Nomen::Rank::Suffix;
+use parent qw( Taxon::Parse );
+
+our $VERSION = 0.001;
+
+# TODO
+
+=comment
+
+use Taxon::Rank::Suffix;
 
 sub init {
   my $self = shift;
 
   my $p = $self->{pattern_parts};
   
-  my $suffix = Nomen::Rank::Suffix->new();
+  my $suffix = Taxon::Rank::Suffix->new();
   $self->{patterns} = $suffix->patterns();   
 }
+
+=cut
 
 1;

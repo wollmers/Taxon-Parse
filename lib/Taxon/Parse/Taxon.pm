@@ -6,6 +6,8 @@ use utf8;
 
 use parent qw( Taxon::Parse );
 
+our $VERSION = 0.001;
+
 sub init {
   my $self = shift;
 

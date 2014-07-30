@@ -6,12 +6,14 @@ use utf8;
 
 use parent qw( Taxon::Parse );
 
-use HTML::Entities;
+#use HTML::Entities;
+
+our $VERSION = 0.001;
 
 # decode_entities($a);
 # encode_entities($a, "\200-\377");
 
-use Unicode::Normalize;
+#use Unicode::Normalize;
 # NFC($string);
 
 sub init {

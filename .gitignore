@@ -24,6 +24,14 @@ attic/
 xt/
 
 *.tar.gz
+/Taxon-Parse-*
+/.build
+/_build*
+/Build
+MYMETA.*
+!META.json
+/.prove
+
 
 *~
 *.bak
