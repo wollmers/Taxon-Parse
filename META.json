@@ -36,7 +36,7 @@
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.008005"
+            "perl" : "5.010001"
          }
       },
       "test" : {
@@ -57,7 +57,7 @@
          "web" : "https://github.com/wollmers/Taxon-Parse"
       }
    },
-   "version" : "0.001",
+   "version" : "0.002",
    "x_contributors" : [
       "Helmut Wollmersdorfer <helmut@wollmersdorfer.at>"
    ]

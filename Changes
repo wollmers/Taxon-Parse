@@ -1,6 +1,7 @@
 Revision history for Taxon::Parse
 
 {{$NEXT}}
+       - needs perl 5.10
 
 0.001  2014-07-30 23:33:02 CEST
        - Initial release.
