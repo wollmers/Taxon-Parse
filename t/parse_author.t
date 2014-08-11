@@ -287,6 +287,7 @@ my $examples =[
 'Hoffmanns.',
 ', non (Willd.)DC.',
 'Hook.(1837) , non Hook.(1841)',
+'J. Agardh ex L. M. Newton, nom. inval',
 ];
 
 my $todo = [

@@ -17,7 +17,7 @@ sub init {
   $p->{apostrophe} = qr/[\'´`]/xms;
   $p->{compound_connector} = qr/[-]/xms;
   $p->{NAME_LETTERS} = qr/[A-ZÏËÖÜÄÉÈČÁÀÆŒ]/xms;
-  $p->{name_letters} = qr/[a-zïëöüäåéèčáàæœ]/xms;
+  $p->{name_letters} = qr/[a-zïëöüäåéèčáàæœſú]/xms;
  
   
   $p->{word}     = qr/
@@ -35,6 +35,7 @@ sub init {
     $p->{NAME_LETTERS}
     $p->{name_letters}+
     \b
+    \??
   /xms;
   $p->{epithet}  = qr/
     $p->{name_letters}+
@@ -90,6 +91,7 @@ sub init {
       |subf
       |sf
       |cv
+      |cf
       |hort
       |m
       |morph
@@ -97,7 +99,9 @@ sub init {
       |ab
       |aberration
       |agg
+      |aff
       |[xX×]
+      |\?
     )\.?)            
   /xms;
   $p->{sensu} = qr/

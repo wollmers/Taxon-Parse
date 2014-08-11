@@ -76,6 +76,12 @@ my $names = [
 'Abelia × grandiflora',
 'Abies X shastensis',
 'Abies ser. Amabiles',
+'Abeona ? serrata',
+'Aboilus? amplus',
+
+'Steinernema cf. glaseri',
+'Amanita aff. volvata',
+'Amalia? mediterranea',
 
 ];
 
@@ -89,12 +95,9 @@ my $names_todo = [
 'Plocamium sp. 2telfairiae BOLD:AAO5906',
 'Influenza A virus (A/common teal/California/11285/2008(mixed))',
 'Lactobacillus delbrueckii subsp. bulgaricus CNCM I-1519',
-'Abeona ? serrata',
-'Aboilus? amplus',
-
-'Steinernema cf. glaseri',
 'Arthopyrenia hyalospora X Hydnellum scrobiculatum',
 
+'Amara (C.) cylindrica',
 ];
 
 my $taxons = [
@@ -161,7 +164,12 @@ for my $name (@$names) {
   ok($object->check('namecaptured',$name), "check captured $name"); 
 }
 
-my $ast = $object->ast('namecaptured','Dennyus (Collodennyus) distinctus timjonesi');
-print STDERR Dumper($ast),"\n";
+for my $name (@$names_todo) {
+#  ok($object->check('name',$name), "check captured $name"); 
+}
+
+
+#my $ast = $object->ast('namecaptured','Dennyus (Collodennyus) distinctus timjonesi');
+#print STDERR Dumper($ast),"\n";
 
 done_testing();

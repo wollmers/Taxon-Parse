@@ -205,6 +205,7 @@ sub init {
         p \.? \s* p \.?
         | non .*
         | nom\. \s* illeg\.
+        | nom\. \s* inval\.?
       )
       \s* \)?
     )?
@@ -232,6 +233,7 @@ sub init {
         p \.? \s* p \.?
         | non .*
         | nom\. \s* illeg\.
+        | nom\. \s* inval\.?
       )
       \s* \)?
     )?

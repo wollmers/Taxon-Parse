@@ -85,7 +85,7 @@ sub normalise {
   # capitalize all entire upper case words
   $string =~  s/$p->{NORM_UPPERCASE_WORDS}/ucfirst(lc($1)/eg;
    
-                $string =~ s/\s\s+/ /g;
+  $string =~ s/\s\s+/ /g;
                 $string =~ s/^\s//;
                 $string =~ s/\s$//;
                 
