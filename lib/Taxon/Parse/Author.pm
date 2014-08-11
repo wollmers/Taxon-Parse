@@ -13,7 +13,7 @@ sub init {
   my $p = $self->{pattern_parts};
 
   # a_ - patterns for author names
-  $p->{apostrophe} = qr/[\'´`]/xms;
+  $p->{apostrophe} = qr/[\'´`\x{2019}]/xms;
   $p->{compound_connector} = qr/[-]/xms;
   $p->{prefix} = qr/
     (?:
@@ -21,11 +21,10 @@ sub init {
       |[vV]on (?:[ -](?:den|der|dem))?
       |v\.?
       |[vV]\.?\s*d\.?\s*
-      |(?:del|Des|De|de|di|Di|da|du|N)[`' _]?
+      |(?:del|[Dd]es|De|de|di|Di|da|du|N)[`' _]?
       |le 
-      |d'
-      |D'
-      |de (?:[ ][lL]a)? 
+      |[Dd] $p->{apostrophe}
+      |[Dd]e (?:[ ][lL]a)? 
       |Mac
       |Mc
       |Le
@@ -204,11 +203,14 @@ sub init {
       (?:
         p \.? \s* p \.?
         | non .*
+        | nec .*
         | nom\. \s* illeg\.
         | nom\. \s* inval\.?
+        | nom\. \s* nud\.?
       )
       \s* \)?
     )?
+    [.,;\s]*
   /xms;
 
   $p->{authorcaptured}   = qr/
@@ -232,11 +234,14 @@ sub init {
       (?:
         p \.? \s* p \.?
         | non .*
+        | nec .*
         | nom\. \s* illeg\.
         | nom\. \s* inval\.?
+        | nom\. \s* nud\.?
       )
       \s* \)?
     )?
+    [.,;\s]*
   /xms;
 
   

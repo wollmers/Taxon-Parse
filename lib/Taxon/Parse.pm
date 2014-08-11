@@ -128,10 +128,7 @@ Taxon::Parse - Parse bio Taxon names
  
 =head1 DESCRIPTION
 
-=head2 Cosine similarity
-
-A intersection B / (sqrt(A) * sqrt(B))
-
+C<Taxon::Parse> is the base module providing utility methods for parsers.
 
 =head1 METHODS
 
@@ -139,6 +136,14 @@ A intersection B / (sqrt(A) * sqrt(B))
 =head2 new
 
  my $object = Taxon::Parse->new();
+ 
+=head2 pattern
+
+ my $regex = $object->pattern($pattern_name);
+
+=head2 pattern_parts
+
+ my $regex = $object->pattern_parts($pattern_name);
  
 =head1 SOURCE REPOSITORY
 

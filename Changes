@@ -1,6 +1,7 @@
 Revision history for Taxon::Parse
 
 {{$NEXT}}
+       - parse more special cases
 
 0.003  2014-08-11 09:40:27 CEST
        - parse more patterns

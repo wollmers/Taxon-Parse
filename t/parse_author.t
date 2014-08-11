@@ -1,11 +1,12 @@
 #!perl
 use strict;
 use warnings;
-use utf8;
+#use utf8;
 
 use lib qw(../lib/);
 
 use Test::More;
+use Test::More::UTF8;
 use Data::Dumper;
 
 binmode(STDOUT, ':utf8');
@@ -288,14 +289,37 @@ my $examples =[
 ', non (Willd.)DC.',
 'Hook.(1837) , non Hook.(1841)',
 'J. Agardh ex L. M. Newton, nom. inval',
+'(De la Llave, 1833)',
+'Dist., nec Feld.',
+'Hewitson, 1862.',
+'Straneo,',
+'J. Agardh, nom. illeg.',
+'Wall., nom. nud.',
+'Decne. ex Raf., nom. nud.',
+'Gautier des Cottes, 1857',
+"d’Orbigny",
+
 ];
 
 my $todo = [
 'MANTHEY & GROSSMANN 1997: 179',
 'Clayton, Price&Page 1996',
 'WILMS & BÖHME 2001',
-'Straneo,',
-'J. Agardh, nom. illeg.',
+'(Blandow ex Voit in Sturm) Venturi & Bottini, 1884',
+'hort.',
+'Cramer 1775/1776',
+'Christoph ?',
+'Labram, D. et Imhoff, L., 1845',
+'[nec King, nec Brehm]',
+'(Cuv. nec Burch. )',
+'A. St. -Hil.',
+'Paul’son, 1875',
+'(? Aud. )',
+'Guérin-Méneville, F.E., 1829-44',
+'Gorjanovic-kramberger 1895',
+'("Shuttl." )',
+'R. Br. bis ex Paris',
+'d’Orbigny',
 ];
 
 for my $name (@$examples) {
@@ -309,6 +333,9 @@ for my $name (@$examples) {
 for my $name (@$examples) {
   ok($object->check('authorcaptured',$name), "check captured $name"); 
 }
+
+#print STDERR Dumper("d’Orbigny"),"\n";
+#print STDERR Dumper("[\'´`]"),"\n";
 
 
 done_testing();

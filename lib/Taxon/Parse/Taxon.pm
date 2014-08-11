@@ -38,6 +38,7 @@ sub init {
     \??
   /xms;
   $p->{epithet}  = qr/
+    ×?
     $p->{name_letters}+
     (?:
       [-]?

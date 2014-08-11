@@ -73,8 +73,13 @@ my $names = [
         
 'Helicobacter pylori',
 'Pseudomonas fluorescens',
+
 'Abelia × grandiflora',
 'Abies X shastensis',
+'Abies x shastensis',
+'Amaranthus ×tucsonensis',
+
+
 'Abies ser. Amabiles',
 'Abeona ? serrata',
 'Aboilus? amplus',
@@ -91,13 +96,27 @@ my $names_todo = [
 '"Spirochaeta interrogans"',
 'not "Brucella ovis"',
 '"Bacterium aquatilis"',
+
 'alpha proteobacterium endosymbiont of Paracatenula sp.',
 'Plocamium sp. 2telfairiae BOLD:AAO5906',
 'Influenza A virus (A/common teal/California/11285/2008(mixed))',
 'Lactobacillus delbrueckii subsp. bulgaricus CNCM I-1519',
+
 'Arthopyrenia hyalospora X Hydnellum scrobiculatum',
 
 'Amara (C.) cylindrica',
+
+'Analtes (?) tripunctalis',
+'Ancilla (Eburna)glabrata speciosa',
+'Ancistrocerus trimarginatus auct. auct. (null)',
+'Ancyloceras (Audouliceras?) fallauxi',
+'Andrena (Mel.) vicina',
+'Andropogon subg. Cymbopogon',
+'Anemone sp. cult.',
+'Angraecum sect. Acaulia',
+'Anisosticta 19-punctata',
+
+'Anodonta herculeus "Gerstford"',
 ];
 
 my $taxons = [
