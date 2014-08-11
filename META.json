@@ -41,7 +41,8 @@
       },
       "test" : {
          "requires" : {
-            "Test::More" : "0.88"
+            "Test::More" : "0.88",
+            "Test::More::UTF8" : "0"
          }
       }
    },
@@ -57,7 +58,7 @@
          "web" : "https://github.com/wollmers/Taxon-Parse"
       }
    },
-   "version" : "0.003",
+   "version" : "0.004",
    "x_contributors" : [
       "Helmut Wollmersdorfer <helmut@wollmersdorfer.at>"
    ]

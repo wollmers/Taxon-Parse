@@ -10,15 +10,22 @@ Taxon::Parse - Parse bio Taxon names
 
 # DESCRIPTION
 
-## Cosine similarity
-
-A intersection B / (sqrt(A) \* sqrt(B))
+`Taxon::Parse` is the base module providing utility methods for parsers.
 
 # METHODS
 
 ## new
 
     my $object = Taxon::Parse->new();
+    
+
+## pattern
+
+    my $regex = $object->pattern($pattern_name);
+
+## pattern\_parts
+
+    my $regex = $object->pattern_parts($pattern_name);
     
 
 # SOURCE REPOSITORY
