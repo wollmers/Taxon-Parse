@@ -8,7 +8,7 @@ use parent qw( Taxon::Parse );
 
 #use HTML::Entities;
 
-our $VERSION = 0.004;
+our $VERSION = 0.005;
 
 # decode_entities($a);
 # encode_entities($a, "\200-\377");
