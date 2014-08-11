@@ -5,7 +5,7 @@ use warnings;
 
 use parent qw( Taxon::Parse );
 
-our $VERSION = 0.002;
+our $VERSION = 0.003;
 
 # TODO
 

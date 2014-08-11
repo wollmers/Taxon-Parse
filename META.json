@@ -57,7 +57,7 @@
          "web" : "https://github.com/wollmers/Taxon-Parse"
       }
    },
-   "version" : "0.002",
+   "version" : "0.003",
    "x_contributors" : [
       "Helmut Wollmersdorfer <helmut@wollmersdorfer.at>"
    ]

@@ -2,6 +2,9 @@ Revision history for Taxon::Parse
 
 {{$NEXT}}
 
+0.003  2014-08-11 09:40:27 CEST
+       - parse more patterns
+
 0.002  2014-07-31 19:01:18 CEST
        - needs perl 5.10
 
