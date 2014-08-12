@@ -117,6 +117,10 @@ my $names_todo = [
 'Anisosticta 19-punctata',
 
 'Anodonta herculeus "Gerstford"',
+
+'Speiredonia martha abb. n.',
+'Speiredonia suffumosa ab. n. crameriana',
+
 ];
 
 my $taxons = [

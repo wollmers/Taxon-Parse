@@ -44,12 +44,14 @@ sub init {
   /xms;
   $p->{team_connector} = qr/
     (?:
-      &|et|and|und|,|;
+      &|et|and|und|y|,|;
     )
   /xms;
   $p->{reference_relation} = qr/
     (?:
-      ex\.?|in
+      ex\.?
+      |in
+      |sensu
     )
   /xms;  
   $p->{word}     = qr/
@@ -149,9 +151,9 @@ sub init {
       |
       20\d\d      # 2000 .. 2099
     )
-    (?:[a-hA-H])?
+    (?:[a-zA-Z])?
     (?:
-      [\/-]
+      [\/-]       # to
       \d{2,4}
     )?
   /xms;
@@ -211,6 +213,7 @@ sub init {
         | nom\. \s* illeg\.
         | nom\. \s* inval\.?
         | nom\. \s* nud\.?
+        | nomen \s+ nudum
       )
       \s* \)?
     )?
@@ -242,6 +245,7 @@ sub init {
         | nom\. \s* illeg\.
         | nom\. \s* inval\.?
         | nom\. \s* nud\.?
+        | nomen \s+ nudum
       )
       \s* \)?
     )?

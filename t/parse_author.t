@@ -302,9 +302,37 @@ my $examples =[
 'Cramer 1775/1776',
 'Guérin-Méneville, F.E., 1829-44',
 'Desbrochers des Loges, 1893-1894',
+
+"Rang, 1835 in Férussac and D'Orbigny, 1834-1848",
+
+'Dusmet y Alonso',
+
+'Schedl, 1959p',
+
+'Smith & Abbot sensu Lintner 1864',
+
+'Vahl ex Dunal, nomen nudum',
 ];
 
 my $todo = [
+'Hodgson, 1863 [nomen nudum]',
+
+'Norman, 18??, non Risso, 1825',
+
+'(Fuckel) anon. ined.',
+
+'Stokes, nom. illegit.',
+'auct. mult.',
+'auct. americ.',
+'C.G. Ehrenberg 1837 (nom. rej.)',
+'nom. cons.',
+'(Schaer.) anon.',
+'nomen novum',
+'nom. nov.',
+'(F.W. Schmidt) Nyman [comb. illeg.]',
+'Greene (pro sp.)',
+'House (pro hybr.)',
+
 'MANTHEY & GROSSMANN 1997: 179',
 'Clayton, Price&Page 1996',
 'WILMS & BÖHME 2001',
@@ -337,6 +365,8 @@ my $todo = [
 'hort. Japon.',
 'hort. bot. Vrat.',
 'hort. Veitch',
+
+'Quoy/Gaimard, 1832',
 ];
 
 for my $name (@$examples) {

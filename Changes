@@ -1,6 +1,7 @@
 Revision history for Taxon::Parse
 
 {{$NEXT}}
+       - more qulifiers
 
 0.005  2014-08-11 23:57:44 CEST
        - more date variants
