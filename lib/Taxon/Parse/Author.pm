@@ -175,6 +175,38 @@ sub init {
       $p->{date}
     )?
   /xms;
+  $p->{non} = qr/
+    (?:
+    (?:
+      \s*\,?\s*
+      [\[(]? \s*
+      (?:
+        p \.? \s* p \.?
+        | non .*
+        | nec .*
+        | nom\. \s* illeg\.
+        | nom\. \s* inval\.?
+        | nom\. \s* nud\.?
+        | nomen \s+ nudum
+        | nom\. \s* nov\.
+        | nomen \s+ novum
+        | comb\. \s* illeg\.
+        | nom\. \s* rej\.
+        | nom\. \s* illegit\.
+        | nom\. \s* cons\.
+        | anon\. \s* ined\.
+        | anon\.
+        | auct\. \s* mult\.
+        | auct\. \s* americ\.
+        | pro \s+ sp\.?
+        | pro \s+ hybr\.?
+      )
+      \s* [\])]?
+    )?
+    [.,;\s]*
+    )?
+  /xms;
+
   $p->{plain}  = qr/
     $p->{phrase}
     (?:
@@ -204,20 +236,8 @@ sub init {
       $p->{date}
     )?
     (?:
-      \s*\,?\s*
-      \(? \s*
-      (?:
-        p \.? \s* p \.?
-        | non .*
-        | nec .*
-        | nom\. \s* illeg\.
-        | nom\. \s* inval\.?
-        | nom\. \s* nud\.?
-        | nomen \s+ nudum
-      )
-      \s* \)?
+      $p->{non}
     )?
-    [.,;\s]*
   /xms;
 
   $p->{authorcaptured}   = qr/
@@ -236,20 +256,8 @@ sub init {
       $p->{date}
     )?
     (?<non>
-      \s*\,?\s*
-      \(? \s*
-      (?:
-        p \.? \s* p \.?
-        | non .*
-        | nec .*
-        | nom\. \s* illeg\.
-        | nom\. \s* inval\.?
-        | nom\. \s* nud\.?
-        | nomen \s+ nudum
-      )
-      \s* \)?
+      $p->{non}
     )?
-    [.,;\s]*
   /xms;
 
   

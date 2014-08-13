@@ -312,26 +312,29 @@ my $examples =[
 'Smith & Abbot sensu Lintner 1864',
 
 'Vahl ex Dunal, nomen nudum',
-];
 
-my $todo = [
+'Greene (pro sp.)',
+'House (pro hybr.)',
 'Hodgson, 1863 [nomen nudum]',
-
-'Norman, 18??, non Risso, 1825',
-
-'(Fuckel) anon. ined.',
-
 'Stokes, nom. illegit.',
-'auct. mult.',
-'auct. americ.',
-'C.G. Ehrenberg 1837 (nom. rej.)',
-'nom. cons.',
-'(Schaer.) anon.',
 'nomen novum',
 'nom. nov.',
 '(F.W. Schmidt) Nyman [comb. illeg.]',
-'Greene (pro sp.)',
-'House (pro hybr.)',
+
+
+'(Fuckel) anon. ined.',
+'C.G. Ehrenberg 1837 (nom. rej.)',
+'nom. cons.',
+
+'auct. mult.',
+'auct. americ.',
+'(Schaer.) anon.',
+
+];
+
+my $todo = [
+
+'Norman, 18??, non Risso, 1825',
 
 'MANTHEY & GROSSMANN 1997: 179',
 'Clayton, Price&Page 1996',
