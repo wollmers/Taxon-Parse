@@ -1,6 +1,8 @@
 Revision history for Taxon::Parse
 
 {{$NEXT}}
+       - more post author qualifiers, hort.
+       - more infragenus
 
 0.007  2014-08-13 09:15:21 CEST
        - more post author qualifiers

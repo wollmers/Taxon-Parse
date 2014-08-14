@@ -88,12 +88,18 @@ my $names = [
 'Amanita aff. volvata',
 'Amalia? mediterranea',
 
+'Amara (C.) cylindrica',
+
+'"Spirochaeta interrogans"',
+
+'Andrena (Mel.) vicina',
+'Andropogon subg. Cymbopogon',
+
 ];
 
 my $names_todo = [
 'Anodonthyla sp. ZSM 673/2003',
         
-'"Spirochaeta interrogans"',
 'not "Brucella ovis"',
 '"Bacterium aquatilis"',
 
@@ -104,14 +110,11 @@ my $names_todo = [
 
 'Arthopyrenia hyalospora X Hydnellum scrobiculatum',
 
-'Amara (C.) cylindrica',
 
 'Analtes (?) tripunctalis',
 'Ancilla (Eburna)glabrata speciosa',
 'Ancistrocerus trimarginatus auct. auct. (null)',
 'Ancyloceras (Audouliceras?) fallauxi',
-'Andrena (Mel.) vicina',
-'Andropogon subg. Cymbopogon',
 'Anemone sp. cult.',
 'Angraecum sect. Acaulia',
 'Anisosticta 19-punctata',

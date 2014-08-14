@@ -46,13 +46,16 @@ sub init {
     )?
   /xms;
   $p->{abbrev}   = qr/
-    [\p{Latin}]{1,2}
+    [\p{Latin}]{1,3}
     [\.]
   /xms;
   $p->{bracketed}    = qr/
     [(\[]
     \s*
-    $p->{group}
+    (?:
+      $p->{group}
+      | $p->{abbrev}
+    )
     \s*
     [)\]]
   /xms;
@@ -60,6 +63,7 @@ sub init {
     (?:
       $p->{bracketed}
       | ser \. \s* $p->{group}
+      | subg \. \s* $p->{group}
     )
   /xms;
   
@@ -131,6 +135,7 @@ sub init {
     )+
   /xms;
   $p->{name}     = qr/
+    (?: ["] \s* )?
     $p->{genus}
       (?:
         (?:
@@ -140,12 +145,14 @@ sub init {
         \s+
         $p->{epithet}
       )*
+      (?: ["] \s* )?
       (?:
         \s+
         $p->{sensu}
       )?
   /xms;
   $p->{namecaptured}     = qr/
+    (?: ["] \s* )?
     (?<genus> $p->{genus} )
       (?:
         (?:
@@ -155,6 +162,7 @@ sub init {
         \s+
         (?<epithet> $p->{epithet} )
       )*
+      (?: ["] \s* )?
       (?:
         \s+
         (?<sensu> $p->{sensu} )

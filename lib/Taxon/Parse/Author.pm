@@ -79,6 +79,7 @@ sub init {
         )?
       )
       | \b DC[\.]
+      | hort\. \s* (?: [\p{IsUpper}\p{IsLower}][\p{IsLower}]{0,9}[\.]? )?
     )
   /xms;
   $p->{abbreviated_name} = qr/

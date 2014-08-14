@@ -330,6 +330,21 @@ my $examples =[
 'auct. americ.',
 '(Schaer.) anon.',
 
+'hort. Berol.',
+'hort.',
+'hort. gall.',
+'hort. Par.',
+'hort.bonn.',
+'hort. Belg.',
+'hort. Amst.',
+'hort. Madr.',
+'hort. angl.',
+'hort. Hamb.',
+'hort. Genev.',
+'hort. Japon.',
+'hort. bot. Vrat.',
+'hort. Veitch',
+
 ];
 
 my $todo = [
@@ -354,20 +369,6 @@ my $todo = [
 '("Shuttl." )',
 'R. Br. bis ex Paris',
 
-'hort. Berol.',
-'hort.',
-'hort. gall.',
-'hort. Par.',
-'hort.bonn.',
-'hort. Belg.',
-'hort. Amst.',
-'hort. Madr.',
-'hort. angl.',
-'hort. Hamb.',
-'hort. Genev.',
-'hort. Japon.',
-'hort. bot. Vrat.',
-'hort. Veitch',
 
 'Quoy/Gaimard, 1832',
 ];
