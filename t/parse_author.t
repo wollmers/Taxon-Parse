@@ -345,6 +345,18 @@ my $examples =[
 'hort. bot. Vrat.',
 'hort. Veitch',
 
+'Desbr. d. Loges, 1895',
+
+'Paul’son, 1875',
+
+'(Blandow ex Voit in Sturm) Venturi & Bottini, 1884',
+'Staudinger 1885 & 1886',
+
+'Christoph ?',
+'Christoph?',
+'? Christoph',
+'?Christoph',
+
 ];
 
 my $todo = [
@@ -352,25 +364,25 @@ my $todo = [
 'Norman, 18??, non Risso, 1825',
 
 'MANTHEY & GROSSMANN 1997: 179',
-'Clayton, Price&Page 1996',
 'WILMS & BÖHME 2001',
-'(Blandow ex Voit in Sturm) Venturi & Bottini, 1884',
-'Chen Sicien, Yu Pei-yu, Wang Shu-yung & Jiang Sheng-qiao 1976',
 
-'Christoph ?',
+'Clayton, Price&Page 1996',
+
+'Chen Sicien, Yu Pei-yu, Wang Shu-yung & Jiang Sheng-qiao 1976',
+'Gorjanovic-kramberger 1895',
+
 'Labram, D. et Imhoff, L., 1845',
 '[nec King, nec Brehm]',
 '(Cuv. nec Burch. )',
-'A. St. -Hil.',
-'Paul’son, 1875',
 '(? Aud. )',
 
-'Gorjanovic-kramberger 1895',
 '("Shuttl." )',
 'R. Br. bis ex Paris',
 
-
 'Quoy/Gaimard, 1832',
+
+'A. St. -Hil.',
+'Y. -P. Lee & J. T. Yoon',
 ];
 
 for my $name (@$examples) {

@@ -25,6 +25,7 @@ sub init {
       |le 
       |[Dd] $p->{apostrophe}
       |[Dd]e (?:[ ][lL]a)? 
+      |d\.
       |Mac
       |Mc
       |Le
@@ -32,12 +33,13 @@ sub init {
       |Ou
       |O'
       |'t
+      |\?
     )
   /xms;
   $p->{suffix} = qr/
     (?:
       (?:
-        f|fil|j|jr|jun|junior|sr|sen|senior|ms
+        f|fil|j|jr|jun|junior|sr|sen|senior|ms|\?
       )
       \.?
     )
@@ -55,7 +57,7 @@ sub init {
     )
   /xms;  
   $p->{word}     = qr/
-    [\p{IsUpper}\'][\p{IsLower}\'´`]+
+    [\p{IsUpper}\'][\p{IsLower}\'´`\x{2019}]+
   /xms;
   $p->{compound} = qr/
     $p->{word}
@@ -154,7 +156,10 @@ sub init {
     )
     (?:[a-zA-Z])?
     (?:
-      [\/-]       # to
+      (?: 
+        [\/-]       # to
+        | \s* & \s*
+      )
       \d{2,4}
     )?
   /xms;
@@ -214,7 +219,7 @@ sub init {
       \s*\b
       $p->{reference_relation}\s+
       $p->{phrase}
-    )?
+    ){0,3}
   /xms;  
   $p->{bracketed}  = qr/
     [\(\[]\s*
