@@ -3,7 +3,7 @@ package Taxon::Parse;
 use strict;
 use warnings;
 
-our $VERSION = 0.008;
+our $VERSION = 0.009;
 
 sub new {
   my $class = shift;
