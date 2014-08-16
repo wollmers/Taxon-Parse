@@ -18,10 +18,11 @@ sub init {
   $p->{prefix} = qr/
     (?:
       [vV](?:an)(?:[ -](?:den|der))?
+      |An \s+ der
       |[vV]on (?:[ -](?:den|der|dem))?
       |v\.?
       |[vV]\.?\s*d\.?\s*
-      |(?:del|[Dd]es|De|de|di|Di|da|du|N)[`' _]?
+      |(?:delle|del|[Dd]es|De|de|di|Di|da|du|N)[`' _]?
       |le 
       |[Dd] $p->{apostrophe}
       |[Dd]e (?:[ ][lL]a)? 
@@ -46,7 +47,15 @@ sub init {
   /xms;
   $p->{team_connector} = qr/
     (?:
-      &|et|and|und|y|,|;
+      \s*
+      (?: &|,|; )
+      \s*
+    )
+    |
+    (?:
+      \s+
+      (?: et|and|und|y )
+      \s+
     )
   /xms;
   $p->{reference_relation} = qr/
@@ -54,6 +63,8 @@ sub init {
       ex\.?
       |in
       |sensu
+      |emend\.?
+      |sec\.?
     )
   /xms;  
   $p->{word}     = qr/
@@ -138,10 +149,10 @@ sub init {
       )
     )*
     (?:
-      \s+(?:
+      (?:
         $p->{'team_connector'}
       )
-      \s+(?:
+      (?:
         al\.?
         |$p->{name}
         |$p->{abbreviated_name}
@@ -189,8 +200,9 @@ sub init {
       (?:
         p \.? \s* p \.?
         | non .*
+        | not .*
         | nec .*
-        | nom\. \s* illeg\.
+        | nom\. \s* illeg\.?
         | nom\. \s* inval\.?
         | nom\. \s* nud\.?
         | nomen \s+ nudum
@@ -231,7 +243,7 @@ sub init {
       $p->{bracketed}\s*
     )?
     (?:
-      $p->{reference_relation}\s+
+      $p->{reference_relation}
     )?
     (?:
       \s*
@@ -251,7 +263,7 @@ sub init {
       $p->{bracketed}\s*
     )?
     (?<reference_relation>
-      $p->{reference_relation}\s+
+      $p->{reference_relation}
     )?
     (?<author>
       \s*

@@ -252,7 +252,6 @@ my $examples =[
 'Clayton, Price & Johnson 2006',
 'Bibron 1855',
 '(Lipsky) Greuter & Burdet',
-'(Lipsky) Greuter & Burdet',
 '(Fr. Duby) ex Oudem. 1897',
 'Clayton, Price & Page 1996',
 'Speg. 1910',
@@ -357,16 +356,34 @@ my $examples =[
 '? Christoph',
 '?Christoph',
 
+'Clayton, Price&Page 1996',
+
+'Rang, 1835 in Férussac',
+"Férussac and D'Orbigny, 1834-1848",
+"Rang in Férussac and D'Orbigny",
+
+'Smith, 1905 emend. Léger & Duboscq, 1906',
+
+'(delle Chiaje, 1828)',
+'Gould 1852 sec. Cowie, Evenhuis & Christensen 1995',
+
+'J. V. Lamouroux 1816 nom. illeg',
+
+'An der Lan 1936',
+
+'Herrich-Schäffer ?',
+'Cope (not Erxleben) 1868',
+
+'Smith, 1905 emend. Léger & Duboscq, 1906',
 ];
 
 my $todo = [
+
 
 'Norman, 18??, non Risso, 1825',
 
 'MANTHEY & GROSSMANN 1997: 179',
 'WILMS & BÖHME 2001',
-
-'Clayton, Price&Page 1996',
 
 'Chen Sicien, Yu Pei-yu, Wang Shu-yung & Jiang Sheng-qiao 1976',
 'Gorjanovic-kramberger 1895',
@@ -383,6 +400,9 @@ my $todo = [
 
 'A. St. -Hil.',
 'Y. -P. Lee & J. T. Yoon',
+
+'L. sensu lato',
+
 ];
 
 for my $name (@$examples) {

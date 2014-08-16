@@ -62,8 +62,11 @@ sub init {
   $p->{infragenus}  = qr/
     (?:
       $p->{bracketed}
-      | ser \. \s* $p->{group}
-      | subg \. \s* $p->{group}
+      | (?:
+      
+           (?: ser|subg|sect|trib ) 
+           \. \s* $p->{group}
+         )
     )
   /xms;
   

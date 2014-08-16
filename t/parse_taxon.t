@@ -42,43 +42,22 @@ my $names = [
         
 'Pseudocercospora dendrobii',
 'Polypogon monspeliensis',
-'Demansia torquata',
         
 'Dennyus (Collodennyus) bartoni',
+'Dennyus (Collodennyus) distinctus timjonesi',
         
 'Sténométope laevissimus',
         
 'Fagus sylvatica subsp. orientalis',
-'Fagus sylvatica',
-        
-'Mycosphaerella eryngii',
-        
-'Dennyus (Collodennyus) distinctus timjonesi',
-        
+
 'Pseudocercospora',
-        
-'Gonocephalus borneensis',
-'Dennyus (Collodennyus) distinctus timjonesi',
-        
-'Gonocephalus abbotti',
-        
+                        
 'Uromastyx alfredschmidti',
         
-'Pseudocercospora',
-        
-'Bactrocera (Hemizeugodacus) ektoalangiae',
-        
-        
-'Coptotermes (Polycrinitermes) chaoxianensis',
-        
-'Helicobacter pylori',
-'Pseudomonas fluorescens',
-
 'Abelia × grandiflora',
 'Abies X shastensis',
 'Abies x shastensis',
 'Amaranthus ×tucsonensis',
-
 
 'Abies ser. Amabiles',
 'Abeona ? serrata',
@@ -86,14 +65,14 @@ my $names = [
 
 'Steinernema cf. glaseri',
 'Amanita aff. volvata',
-'Amalia? mediterranea',
-
-'Amara (C.) cylindrica',
 
 '"Spirochaeta interrogans"',
 
+'Amara (C.) cylindrica',
 'Andrena (Mel.) vicina',
 'Andropogon subg. Cymbopogon',
+'Angraecum sect. Acaulia',
+'Agaricus trib. Armillaria',
 
 ];
 
@@ -101,7 +80,6 @@ my $names_todo = [
 'Anodonthyla sp. ZSM 673/2003',
         
 'not "Brucella ovis"',
-'"Bacterium aquatilis"',
 
 'alpha proteobacterium endosymbiont of Paracatenula sp.',
 'Plocamium sp. 2telfairiae BOLD:AAO5906',
@@ -110,13 +88,12 @@ my $names_todo = [
 
 'Arthopyrenia hyalospora X Hydnellum scrobiculatum',
 
-
 'Analtes (?) tripunctalis',
 'Ancilla (Eburna)glabrata speciosa',
 'Ancistrocerus trimarginatus auct. auct. (null)',
 'Ancyloceras (Audouliceras?) fallauxi',
 'Anemone sp. cult.',
-'Angraecum sect. Acaulia',
+
 'Anisosticta 19-punctata',
 
 'Anodonta herculeus "Gerstford"',

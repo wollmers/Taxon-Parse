@@ -1,6 +1,7 @@
 Revision history for Taxon::Parse
 
 {{$NEXT}}
+       - more author and taxon corner cases
 
 0.009  2014-08-15 09:08:07 CEST
        - more corner cases
