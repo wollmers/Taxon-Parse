@@ -1,6 +1,7 @@
 Revision history for Taxon::Parse
 
 {{$NEXT}}
+       - add travis CI
 
 0.010  2014-08-16 05:34:29 CEST
        - more author and taxon corner cases
