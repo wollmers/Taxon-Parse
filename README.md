@@ -2,6 +2,13 @@
 
 Taxon::Parse - Parse bio Taxon names
 
+<div>
+
+</div>
+
+<a href="https://travis-ci.org/wollmers/Taxon-Parse"><img src="https://travis-ci.org/wollmers/Taxon-Parse.png" alt="Taxon-Parse"></a>
+<a href='https://coveralls.io/r/wollmers/Taxon-Parse?branch=master'><img src='https://coveralls.io/repos/wollmers/Taxon-Parse/badge.png?branch=master' alt='Coverage Status' /></a>
+
 # SYNOPSIS
 
     use Taxon::Parse;
