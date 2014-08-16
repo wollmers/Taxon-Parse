@@ -1,6 +1,8 @@
 Revision history for Taxon::Parse
 
 {{$NEXT}}
+
+0.012  2014-08-16 14:29:51 CEST
        - added tests, improve coverage
 
 0.011  2014-08-16 06:57:47 CEST
